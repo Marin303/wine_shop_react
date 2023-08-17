@@ -8,7 +8,7 @@ const NavMobile = React.forwardRef(({ isOpen }, btnContentRef) => {
     <div className={animationClass}>
       <div
         ref={btnContentRef}
-        className="slide-in-animation flex justify-center float-right bg-white w-40 h-80 rounded-b-lg text-black "
+        className="slide-in-animation flex justify-center float-right box-border bg-white w-40 h-[91vh] rounded-b-lg text-black "
       >
         <ul className="flex flex-col gap-4 ul-desktop p-4">
           <li>

@@ -72,8 +72,23 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <button className="navBtn md:hidden ml-auto" onClick={toggleNavMobile}>
-          <FontAwesomeIcon icon="fa-solid fa-bars" className="pr-5" />
+        <button
+          className="navBtn md:hidden relative w-full"
+          onClick={toggleNavMobile}
+        >
+          <FontAwesomeIcon
+            icon="fa-solid fa-x"
+            className={`absolute inset-0 border-2 p-2 m-auto mr-2 w-7 ${
+              openNavContent ? "opacity-100" : "opacity-0"
+            }`}
+          />
+
+          <FontAwesomeIcon
+            icon="fa-solid fa-bars"
+            className={`absolute inset-0 border-2 p-2 m-auto mr-2 w-7 ${
+              openNavContent ? "opacity-0" : "opacity-100"
+            }`}
+          />
         </button>
       </nav>
       <div className="overflow-hidden">
