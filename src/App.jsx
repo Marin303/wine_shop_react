@@ -1,10 +1,13 @@
-import './App.css';
-import Header from './Components/Header';
+import "./App.css";
+import Header from "./Components/Header";
+import Main from "./Components/Main";
+
 
 function App() {
   return (
-    <div className="App">
-     <Header/>
+    <div className="App flex-col h-screen">
+      <Header />
+      <Main/>
     </div>
   );
 }
