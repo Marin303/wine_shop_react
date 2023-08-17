@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="flex bg-slate-800">
+     <nav className="flex bg-black-opc-50 fixed top-0 left-0 w-full h-20">
         <img src={glassOfWine} alt="glass of wine" className="w-40 h-14 m-2" />
         <div className="gap-6 items-center md:flex hidden m-auto">
           <ul className="flex gap-4 ul-desktop">
@@ -91,7 +91,7 @@ const Header = () => {
           />
         </button>
       </nav>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden fixed right-0 top-20 ">
         <NavMobile ref={btnContentRef} isOpen={openNavContent} />
       </div>
     </>
