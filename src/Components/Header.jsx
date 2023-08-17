@@ -12,24 +12,26 @@ const Header = () => {
     setOpenNavContent((prev) => !prev);
   };
 
-  const handleClickOutside = useCallback((e) => {
-    if (e.target.closest('.navContent')) {
-        return; 
-    }
-    const isClickOutside =
-      btnContentRef.current && !btnContentRef.current.contains(e.target);
-    if (isClickOutside) {
-      toggleNavMobile();
-    }
-}, []);
+  const handleClickOutside = useCallback(
+    (e) => {
+      if (e.target.closest(".navBtn")) {
+        return;
+      }
+      const isClickOutside =
+        btnContentRef.current && !btnContentRef.current.contains(e.target);
+      if (isClickOutside && openNavContent) {
+        toggleNavMobile();
+      }
+    },
+    [openNavContent]
+  );
 
-
-useEffect(() => {
+  useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-}, [handleClickOutside]);
+  }, [handleClickOutside]);
 
   return (
     <>
@@ -70,15 +72,13 @@ useEffect(() => {
             </li>
           </ul>
         </div>
-
-        <button className="navContent md:hidden ml-auto" onClick={toggleNavMobile}>
+        <button className="navBtn md:hidden ml-auto" onClick={toggleNavMobile}>
           <FontAwesomeIcon icon="fa-solid fa-bars" className="pr-5" />
         </button>
       </nav>
-      {
-      openNavContent && 
-        <NavMobile ref={btnContentRef} />
-      }
+      <div className="overflow-hidden">
+        <NavMobile ref={btnContentRef} isOpen={openNavContent} />
+      </div>
     </>
   );
 };
