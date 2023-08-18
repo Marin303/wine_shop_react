@@ -1,25 +1,47 @@
 import React from "react";
 import bgImg from "../Images/bg-img-1.png";
 import bgImg2 from "../Images/bg-img-2.png";
+import p1 from "../Images/p1.jpg";
+import p2 from "../Images/p2.jpg";
+import p3 from "../Images/p3.jpg";
 
 const Main = () => {
   return (
-    <div className="w-full relative top-20 h-[calc(100vh-5rem)] overflow-x-hidden">
-      <div>
-        <img
-          src={bgImg}
-          alt="cuban cigarette smoke and a bottle of the wine"
-          className="bg-cover bg-center bg-no-repeat w-full 
-          animate-slide1 absolute"
-        />
+    <div className="w-full">
+      <div className="relative w-full aspect-video overflow-x-hidden">
+        <div className="absolute top-0 left-0 w-full h-full">
+          <img
+            src={bgImg}
+            alt="cuban cigarette smoke and a bottle of the wine"
+            className="bg-cover bg-center bg-no-repeat w-full h-full animate-slide1"
+          />
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full">
+          <img
+            src={bgImg2}
+            alt="rose and a bottle of the wine"
+            className="bg-cover bg-center bg-no-repeat w-full h-full animate-slide2"
+          />
+        </div>
       </div>
-      <div>
-        <img
-          src={bgImg2}
-          alt="rose and a bottle of the wine"
-          className="bg-cover bg-center bg-no-repeat w-full 
-          animate-slide2 absolute"
-        />
+      <div className="relative h-auto">
+        <div className="flex w-full flex-wrap">
+          <img
+            src={p1}
+            alt="three bottles of a wine"
+            className="w-full sm:w-1/1 md:w-1/3"
+          />
+          <img
+            src={p2}
+            alt="two candles bottle of a wine and two glasses"
+            className="w-full sm:w-1/1 md:w-1/3"
+          />
+          <img
+            src={p3}
+            alt="strong drink on a table"
+            className="w-full sm:w-1/1 md:w-1/3"
+          />
+        </div>
       </div>
     </div>
   );
