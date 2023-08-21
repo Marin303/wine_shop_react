@@ -79,11 +79,11 @@ button .fa-bars {
 }
 
 .animate-slide1 {
-  animation: slideEffect1 20s infinite;
+  animation: slideEffect1 20s forwards;
 }
 
 .animate-slide2 {
-  animation: slideEffect2 20s infinite;
+  animation: slideEffect2 20s forwards;
 }
 
 
@@ -101,3 +101,23 @@ button .fa-bars {
   background-image: linear-gradient(125deg, #fb3c7f 0%, #ffc05e 100%);
   border-radius: 10px;
 }
+
+/*
+.lineeffect a::after {
+   border-left: 1px solid rgba(255, 255, 255); 
+  border-right: 1px solid #fff; 
+  transform: scale(1, 0);
+
+/* 
+.lineeffect a::before, .lineeffect a::after{
+bottom: 10px;
+    content: "";
+    left: 10px;
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+    z-index: 1; 
+}
+    */

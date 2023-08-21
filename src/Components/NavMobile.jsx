@@ -1,12 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const NavMobile = React.forwardRef(({ isOpen }, btnContentRef) => {
-  const animationClass = isOpen ? "slide-in-animation" : "slide-out-animation";
+const NavMobile = React.forwardRef(({ isOpen, buttonClicked  }, btnContentRef) => {
 
+if (!buttonClicked) {
+    return null;
+  }
+  const animationClass = isOpen ? "slide-in-animation" : "slide-out-animation";
+  
   return (
-    <div className={`${animationClass} fixed top-20 right-0 z-50 overflow-hidden`}>
-      <div
+    <div className={`fixed top-20 right-0 z-50 overflow-hidden ${animationClass}`}>
+    <div
         ref={btnContentRef}
         className="flex justify-center float-right box-border bg-white-opc-50 w-40 rounded-b-lg text-black h-[calc(100vh-5rem)] "
       >
