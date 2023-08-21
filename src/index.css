@@ -49,14 +49,19 @@ button .fa-bars {
 }
 
 @keyframes slideEffect1 {
-  0%, 25% {
+
+  0%,
+  25% {
     transform: translateX(0);
     opacity: 1;
   }
-  50%, 75% {
+
+  50%,
+  75% {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -64,14 +69,19 @@ button .fa-bars {
 }
 
 @keyframes slideEffect2 {
-  0%, 25% {
+
+  0%,
+  25% {
     transform: translateX(100%);
     opacity: 0;
   }
-  50%, 75% {
+
+  50%,
+  75% {
     transform: translateX(0);
     opacity: 1;
   }
+
   100% {
     transform: translateX(100%);
     opacity: 0;
@@ -79,9 +89,86 @@ button .fa-bars {
 }
 
 .animate-slide1 {
-  animation: slideEffect1 20s infinite;
+  animation: slideEffect1 20s forwards;
 }
 
+/*infinite*/
+
 .animate-slide2 {
-  animation: slideEffect2 20s infinite;
+  animation: slideEffect2 20s forwards;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(125deg, #fb3c7f 0%, #ffc05e 100%);
+  border-radius: 10px;
+}
+
+
+/* Horizontal lines (Top & Bottom) */
+.lineeffect::before,
+.lineeffect::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  transition: transform 0.35s;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+}
+
+.lineeffect::before {
+  top: 10px;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.lineeffect::after {
+  bottom: 10px;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+
+/* Vertical lines (Left & Right) using children divs */
+.lineeffect>div::before,
+.lineeffect>div::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  transition: transform 0.35s;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+}
+
+.lineeffect>div::before {
+  left: 10px;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.lineeffect>div::after {
+  right: 10px;
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+.lineeffect:hover::before,
+.lineeffect:hover::after {
+  transform: scaleX(1);
+}
+
+.lineeffect:hover>div::before,
+.lineeffect:hover>div::after {
+  transform: scaleY(1);
 }
