@@ -91,9 +91,7 @@ const Header = () => {
           />
         </button>
       </nav>
-      <div className="overflow-hidden fixed right-0 top-20 ">
-        <NavMobile ref={btnContentRef} isOpen={openNavContent} />
-      </div>
+        <NavMobile ref={btnContentRef} isOpen={openNavContent} /> 
     </>
   );
 };

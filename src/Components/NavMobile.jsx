@@ -5,10 +5,10 @@ const NavMobile = React.forwardRef(({ isOpen }, btnContentRef) => {
   const animationClass = isOpen ? "slide-in-animation" : "slide-out-animation";
 
   return (
-    <div className={animationClass}>
+    <div className={`${animationClass} fixed top-20 right-0 z-50 overflow-hidden`}>
       <div
         ref={btnContentRef}
-        className="slide-in-animation flex justify-center float-right box-border bg-white-opc-50 w-40 rounded-b-lg text-black h-[calc(100vh-5rem)]"
+        className="flex justify-center float-right box-border bg-white-opc-50 w-40 rounded-b-lg text-black h-[calc(100vh-5rem)] "
       >
         <ul className="flex flex-col gap-4 ul-desktop p-4">
           <li>

@@ -1,3 +1,7 @@
+## Deploy preview
+
+[Click here](https://wine-shop-marin.netlify.app/)
+
 ## Getting Started 
 
 ### install dependencies
@@ -19,4 +23,9 @@ npm i --save @fortawesome/free-regular-svg-icons
 
 ```
 npm i --save @fortawesome/react-fontawesome@latest
+```
+
+### custom scroll-bar-2
+```
+npm i react-custom-scrollbars-2
 ```
