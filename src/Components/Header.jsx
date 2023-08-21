@@ -39,7 +39,7 @@ const Header = () => {
   return (
     <>
       <nav className="flex bg-black-opc-50 sticky top-0 left-0 w-full h-20 z-10">
-        <img src={glassOfWine} alt="glass of wine" className="w-40 h-14 m-2" />
+        <img src={glassOfWine} alt="glass of wine" className="max-w-40 max-h-14 m-2" />
         <div className="gap-6 items-center md:flex hidden m-auto">
           <ul className="flex gap-4 ul-desktop">
             <li>

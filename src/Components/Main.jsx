@@ -26,21 +26,25 @@ const Main = () => {
       </div>
       <div className="relative h-auto">
         <div className="flex w-full flex-wrap">
-          <img
-            src={p1}
-            alt="three bottles of a wine"
-            className="w-full sm:w-1/1 md:w-1/3"
-          />
-          <img
-            src={p2}
-            alt="two candles bottle of a wine and two glasses"
-            className="w-full sm:w-1/1 md:w-1/3"
-          />
-          <img
-            src={p3}
-            alt="strong drink on a table"
-            className="w-full sm:w-1/1 md:w-1/3"
-          />
+          <div className="w-full sm:w-1/1 md:w-1/3 lineeffect">
+            <div>
+              <img src={p1} alt="three bottles of a wine" className="w-full" />
+            </div>
+          </div>
+          <div className="w-full sm:w-1/1 md:w-1/3 lineeffect">
+            <div>
+              <img
+                src={p2}
+                alt="two candles bottle of a wine and two glasses"
+                className="w-full"
+              />
+            </div>
+          </div>
+          <div className="w-full sm:w-1/1 md:w-1/3 lineeffect">
+            <div>
+              <img src={p3} alt="strong drink on a table" className="w-full" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
