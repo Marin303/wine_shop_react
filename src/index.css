@@ -114,9 +114,6 @@ button .fa-bars {
   border-radius: 10px;
 }
 
-.lineeffect {
-  position: relative;
-}
 
 /* Horizontal lines (Top & Bottom) */
 .lineeffect::before,
@@ -174,8 +171,4 @@ button .fa-bars {
 .lineeffect:hover>div::before,
 .lineeffect:hover>div::after {
   transform: scaleY(1);
-}
-
-.wineWrapper img{
-  display: inline-block;
 }
