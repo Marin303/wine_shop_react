@@ -4,7 +4,7 @@ import handPickBack from "../Images/bg-hand.png";
 const HandPicked = () => {
   return (
     <div
-      className="relative w-full h-auto bg-cover bg-center md:p-10 p-2 flex justify-end"
+      className="relative w-full h-auto bg-cover bg-center bg-no-repeat md:p-10 p-2 flex justify-end"
       style={{ backgroundImage: `url(${handPickBack})` }}
     >
       <aside className="text-white md:pr-16 flex flex-col justify-center h-full">

@@ -3,6 +3,7 @@ import Header from "./Pages/Header";
 import Main from "./Pages/Main";
 import WineCollect from "./Pages/WineCollect";
 import HandPicked from "./Pages/HandPicked";
+import FeaturedProjects from "./Pages/FeaturedProjects";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Main />
       <WineCollect />
       <HandPicked />
+      <FeaturedProjects />
     </div>
   );
 }

@@ -11,7 +11,7 @@ body{
   @apply bg-black text-white font-bricolage
 }
 
-.ul-desktop li, figcaption {
+.ul-desktop li, figcaption, .featured {
   @apply transition duration-500 ease-in-out delay-150 hover:text-blue-500 cursor-pointer;
 }
 
