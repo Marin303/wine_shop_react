@@ -6,62 +6,77 @@ import product4 from "../Images/featured/pro-4.png";
 import product5 from "../Images/featured/pro-5.png";
 import product6 from "../Images/featured/pro-6.png";
 
-const Products = () => {
-  
+const Products = ({ currentSlide, screenWidth }) => {
+  const isDesktop = screenWidth > 800;
+
+  const products = [
+    {
+      image: product1,
+      alt: "Annabelle wine",
+      name: "Quinta do Crasto",
+      price: 300,
+      discount: 340,
+    },
+    {
+      image: product2,
+      alt: "Saint Patrick wine",
+      name: "Quinta do Crasto",
+      price: 300,
+      discount: 340,
+    },
+    {
+      image: product3,
+      alt: "Carignan wine",
+      name: "Quinta do Crasto",
+      price: 300,
+      discount: 340,
+    },
+    {
+      image: product4,
+      alt: "Cold Wind wine",
+      name: "Quinta do Crasto",
+      price: 300,
+      discount: 340,
+    },
+    {
+      image: product5,
+      alt: "Trilogy wine",
+      name: "Quinta do Crasto",
+      price: 300,
+      discount: 340,
+    },
+    {
+      image: product6,
+      alt: "Jackobs Creek wine",
+      name: "Quinta do Crasto",
+      price: 300,
+      discount: 340,
+    },
+  ];
+
+  const renderProducts = (start, end) => {
+    return products.slice(start, end).map((product, index) => (
+      <section key={index} className="inline-block relative">
+        <img src={product.image} alt={product.alt} />
+        {start + index === 1 && (
+          <span className="triangle bg-yellow-400 inline-block p-2 rotate-[-90deg] absolute top-0 left-0 font-semibold">
+            NEW
+          </span>
+        )}
+        <p>{product.name}</p>
+        <div className="flex justify-center gap-4">
+          <p>${product.price}</p>
+          <p className="line-through">${product.discount}</p>
+        </div>
+      </section>
+    ));
+  };
+
   return (
     <>
-      <section className="inline-block relative">
-        <img src={product1} alt="Annabelle wine" />
-        <span className="triangle bg-yellow-400 inline-block p-2 rotate-[-90deg] absolute top-0 left-0 font-semibold">
-          NEW
-        </span>
-        <p>Quinta do Crasto</p>
-        <div className="flex justify-center gap-4">
-          <p>$300</p>
-          <p className="line-through">$340</p>
-        </div>
-      </section>
-      <section key={product2}>
-        <img src={product2} alt="Saint Patrick wine" />
-        <p>Quinta do Crasto</p>
-        <div className="flex justify-center gap-4">
-          <p>$300</p>
-          <p className="line-through">$340</p>
-        </div>
-      </section>
-      <section key={product3}>
-        <img src={product3} alt="Carignan wine" />
-        <p>Quinta do Crasto</p>
-        <div className="flex justify-center gap-4">
-          <p>$300</p>
-          <p className="line-through">$340</p>
-        </div>
-      </section>
-
-      <section key={product4}>
-        <img src={product4} alt="Cold Wind wine" />
-        <p>Quinta do Crasto</p>
-        <div className="flex justify-center gap-4">
-          <p>$300</p>
-          <p className="line-through">$340</p>
-        </div>
-      </section>
-      <section key={product5}>
-        <img src={product5} alt="Trilogy wine" />
-        <p>Quinta do Crasto</p>
-        <div className="flex justify-center gap-4">
-          <p>$300</p>
-          <p className="line-through">$340</p>
-        </div>
-      </section>
-      <section key={product6}>
-        <img src={product6} alt="Jackobs Creek wine" />
-        <p>Quinta do Crasto</p>
-        <div className="flex justify-center gap-4">
-          <p>$300</p>
-          <p className="line-through">$340</p>
-        </div>
-      </section>
+      {isDesktop
+        ? renderProducts(0, products.length)
+        : renderProducts(3 * currentSlide, 3 * currentSlide + 3)}
     </>
   );
 };

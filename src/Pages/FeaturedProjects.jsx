@@ -3,38 +3,32 @@ import icon from "../Images/icons/Icon-sep.png";
 import Products from "../Components/Products";
 
 const FeaturedProjects = () => {
-  const [currentSlide, setCurrentSlide] = useState(3); // max 2 slides for mobile - 3 slide for desktop version
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
-      if (window.innerWidth > 800) {
-        setCurrentSlide(3);
-        //slide sould disaper and all section showed
-      } else {
-        setCurrentSlide(1);
-        // slider should apper so user can scroll it
-      }
     };
-
     window.addEventListener("resize", handleResize);
-    handleResize();
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
+  const smallerScreen = screenWidth <= 800;
+
   const nextSlide = () => {
-    setCurrentSlide(currentSlide + 1);
+    if (smallerScreen && currentSlide < 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentSlide(currentSlide - 1);
+    if (smallerScreen && currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
   };
-
-  console.log(screenWidth, currentSlide);
 
   return (
     <>
@@ -49,7 +43,7 @@ const FeaturedProjects = () => {
       </div>
 
       <div className="flex justify-between mt-5">
-        <Products />
+        <Products currentSlide={currentSlide} screenWidth={screenWidth} />
       </div>
       <div className="flex gap-1 justify-center">
         <button
