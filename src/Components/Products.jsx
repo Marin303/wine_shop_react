@@ -5,10 +5,12 @@ import product3 from "../Images/featured/pro-3.png";
 import product4 from "../Images/featured/pro-4.png";
 import product5 from "../Images/featured/pro-5.png";
 import product6 from "../Images/featured/pro-6.png";
+import useSwipe from "../Utility/SwipeEffect";
 
-const Products = ({ currentSlide, screenWidth }) => {
+const Products = ({ currentSlide, setCurrentSlide, screenWidth }) => {
   const isDesktop = screenWidth > 800;
   const isMobile = screenWidth < 400;
+
   const products = [
     {
       image: product1,
@@ -54,10 +56,24 @@ const Products = ({ currentSlide, screenWidth }) => {
     },
   ];
 
+  const { 
+    handleTouchStart, 
+    handleTouchMove, 
+    handleTouchEnd 
+} = useSwipe(products.length, setCurrentSlide, screenWidth);
+
+
   const renderProducts = (start, end) => {
     return products.slice(start, end).map((product, index) => (
       <section key={index} className="inline-block relative">
-        <img src={product.image} alt={product.alt} />
+        <img
+          src={product.image}
+          alt={product.alt}
+          draggable="false"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        />
         {start + index === 1 && (
           <span className="triangle bg-yellow-400 inline-block p-2 rotate-[-90deg] absolute top-0 left-0 font-semibold">
             NEW

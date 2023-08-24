@@ -73,10 +73,11 @@ const FeaturedProjects = () => {
         <p className="featured">MOST WANTER</p>
       </div>
 
-      <div className="product-wrapper flex justify-around mt-5 relative">
-        <Products 
-         currentSlide={currentSlide} 
-         screenWidth={screenWidth} 
+      <div className="product-wrapper flex justify-around mt-5 relative cursor-grab active:cursor-grabbing">
+        <Products
+          currentSlide={currentSlide}
+          screenWidth={screenWidth}
+          setCurrentSlide={setCurrentSlide}
         />
         {mobileVersion
           ? renderDots(6, currentSlide)
