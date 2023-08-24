@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import product1 from "../Images/featured/pro-1.png";
 import product2 from "../Images/featured/pro-2.png";
 import product3 from "../Images/featured/pro-3.png";
@@ -7,9 +7,27 @@ import product5 from "../Images/featured/pro-5.png";
 import product6 from "../Images/featured/pro-6.png";
 import useSwipe from "../Utility/SwipeEffect";
 
+import { useSpring, animated } from "react-spring";
+
 const Products = ({ currentSlide, setCurrentSlide, screenWidth }) => {
   const isDesktop = screenWidth > 800;
   const isMobile = screenWidth < 400;
+
+  const [fade, setFade] = useSpring(() => ({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 100,
+    config: {
+        duration: 1000
+    }
+}));
+
+useEffect(() => {
+  setFade.start({ opacity: 0 });
+  setTimeout(() => setFade.start({ opacity: 1 }), 100);
+}, [currentSlide, setFade]);
+
+
 
   const products = [
     {
@@ -56,24 +74,25 @@ const Products = ({ currentSlide, setCurrentSlide, screenWidth }) => {
     },
   ];
 
-  const { 
-    handleTouchStart, 
-    handleTouchMove, 
-    handleTouchEnd 
-} = useSwipe(products.length, setCurrentSlide, screenWidth);
-
+  const { handleTouchStart, handleTouchMove, handleTouchEnd } = useSwipe(
+    products.length,
+    setCurrentSlide,
+    screenWidth
+  );
 
   const renderProducts = (start, end) => {
     return products.slice(start, end).map((product, index) => (
       <section key={index} className="inline-block relative">
-        <img
-          src={product.image}
-          alt={product.alt}
-          draggable="false"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        />
+        <animated.div key={currentSlide} style={fade}>
+          <img
+            src={product.image}
+            alt={product.alt}
+            draggable="false"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          />
+        </animated.div>
         {start + index === 1 && (
           <span className="triangle bg-yellow-400 inline-block p-2 rotate-[-90deg] absolute top-0 left-0 font-semibold">
             NEW
@@ -96,6 +115,8 @@ const Products = ({ currentSlide, setCurrentSlide, screenWidth }) => {
     <>
       {isDesktop
         ? renderProducts(0, products.length)
+        : isMobile
+        ? renderProducts(currentSlide, currentSlide + 1)
         : renderProducts(3 * currentSlide, 3 * currentSlide + 3)}
     </>
   );

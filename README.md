@@ -29,3 +29,8 @@ npm i --save @fortawesome/react-fontawesome@latest
 ```
 npm i react-custom-scrollbars-2
 ```
+
+```
+npm install react-spring
+
+```
