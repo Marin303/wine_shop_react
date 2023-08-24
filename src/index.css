@@ -139,7 +139,7 @@ button .fa-bars {
   transform: scaleX(0);
 }
 
-/* Vertical lines (Left & Right) using children divs */
+
 .lineeffect>div::before,
 .lineeffect>div::after {
   content: "";
@@ -183,4 +183,25 @@ button .fa-bars {
   bottom: 50%;
   left: -6px;
   border-top: 4px solid #facc15;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid yellow;
+  background-color: transparent;
+}
+
+.dot.active {
+  background-color: yellow;
+}
+
+.hidden-tablet{
+  display: block;
+}
+@media (min-width: 800px) {
+  .hidden-tablet {
+    display: none;
+  }
 }
