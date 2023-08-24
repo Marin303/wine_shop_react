@@ -8,7 +8,7 @@ import product6 from "../Images/featured/pro-6.png";
 
 const Products = ({ currentSlide, screenWidth }) => {
   const isDesktop = screenWidth > 800;
-
+  const isMobile = screenWidth < 400;
   const products = [
     {
       image: product1,
@@ -71,6 +71,10 @@ const Products = ({ currentSlide, screenWidth }) => {
       </section>
     ));
   };
+
+  if (isMobile) {
+    return renderProducts(currentSlide, currentSlide + 1);
+  }
 
   return (
     <>
