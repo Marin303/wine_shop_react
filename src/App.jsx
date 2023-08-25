@@ -6,6 +6,8 @@ import HandPicked from "./Pages/HandPicked";
 import FeaturedProjects from "./Pages/FeaturedProjects";
 import CustomerReview from "./Pages/CustomerReview";
 import LatestBlog from "./Pages/LatestBlog";
+import Newsletter from './Pages/Newsletter'
+import Footer from './Pages/Footer'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <FeaturedProjects />
       <CustomerReview/>
       <LatestBlog/>
+      <Newsletter/>
+      <Footer/>
     </div>
   );
 }

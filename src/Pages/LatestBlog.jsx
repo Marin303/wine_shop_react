@@ -30,10 +30,10 @@ const LatestBlog = () => {
             libero fugit.
           </p>
           <button className="text-yellow-400">Read more</button>
-          <img src={bg2} alt="Customer image" />
+          <img src={bg2} alt="Jack Daniels glass" />
         </section>
         <section className="md:w-1/3 flex flex-col p-3">
-          <img src={bg3} alt="Customer image" />
+          <img src={bg3} alt="Two glasses" />
           <h3 className="mt-2">New Wine Shop in your area</h3>
           <p>August 25, 2023</p>
           <p className="p-3 text-left">
