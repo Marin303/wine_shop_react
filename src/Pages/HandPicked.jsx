@@ -4,12 +4,12 @@ import handPickBack from "../Images/bg-hand.png";
 const HandPicked = () => {
   return (
     <div
-      className="relative w-full h-auto bg-cover bg-center bg-no-repeat md:p-10 p-2 flex justify-end"
+      className="relative w-full h-auto bg-cover bg-center bg-no-repeat md:p-10 p-4 flex justify-end"
       style={{ backgroundImage: `url(${handPickBack})` }}
     >
       <aside className="text-white md:pr-16 flex flex-col justify-center h-full">
-        <h3 className="text-4xl font-bold">Hand-Picked</h3>
-        <p className="text-4xl">Collection</p>
+        <h3 className="md:text-4xl text-2xl font-bold">Hand-Picked</h3>
+        <p className="md:text-4xl text-2xl">Collection</p>
         <p>Save More, Pour More</p>
         <p className="max-w-md">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et

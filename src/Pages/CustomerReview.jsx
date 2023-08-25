@@ -17,7 +17,7 @@ const CustomerReview = () => {
       <div className="mt-20 w-3/4 m-auto">
         <Slide>
           <div className="w-3/4 m-auto">
-            <img src={customer1} alt="" className="m-auto" />
+            <img src={customer1} alt="Customer image" className="m-auto" />
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi
               atque saepe nihil quo veniam error maiores sed, perferendis
@@ -28,7 +28,7 @@ const CustomerReview = () => {
           </div>
 
           <div className="w-3/4 m-auto">
-            <img src={customer2} alt="" className="m-auto" />
+            <img src={customer2} alt="Customer image" className="m-auto" />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
               perspiciatis voluptatum dolor amet eveniet dicta alias? Officiis
@@ -39,7 +39,7 @@ const CustomerReview = () => {
           </div>
 
           <div className="w-3/4 m-auto">
-            <img src={customer3} alt="" className="m-auto" />
+            <img src={customer3} alt="Customer image" className="m-auto" />
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Doloremque eveniet consequuntur ipsa quisquam dolore consequatur

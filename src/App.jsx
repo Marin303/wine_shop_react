@@ -5,6 +5,7 @@ import WineCollect from "./Pages/WineCollect";
 import HandPicked from "./Pages/HandPicked";
 import FeaturedProjects from "./Pages/FeaturedProjects";
 import CustomerReview from "./Pages/CustomerReview";
+import LatestBlog from "./Pages/LatestBlog";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <HandPicked />
       <FeaturedProjects />
       <CustomerReview/>
+      <LatestBlog/>
     </div>
   );
 }
