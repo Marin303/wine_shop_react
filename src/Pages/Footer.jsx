@@ -9,7 +9,7 @@ import card6 from "../Images/cards/card-6.png";
 
 const Footer = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10" id="aboutUs">
       <section className="flex flex-wrap gap-4 justify-around">
         <ul className="ul-footer">
           <li className="border-b border-yellow-400">Company</li>
@@ -35,12 +35,46 @@ const Footer = () => {
           <li>Shipping Info</li>
           <li>Wishlist</li>
         </ul>
-        <ul className="ul-footer">
+        <ul className="ul-footer2">
           <li className="border-b border-yellow-400">Connect With Us</li>
-          <li>ICONS</li>
-          <li>Europe, Croatia</li>
-          <li>wine@gmail.com</li>
-          <li>+385 98...</li>
+          <li className="flex gap-4 mt-1 mb-1">
+            <a href="fb" className="hover:text-blue-600">
+              <FontAwesomeIcon icon="fa-brands fa-facebook" />
+            </a>
+            <a
+              href="https://github.com/Marin303"
+              className="hover:text-yellow-600"
+            >
+              <FontAwesomeIcon icon="fa-brands fa-github" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/marin-muktic/"
+              className="hover:text-blue-600"
+            >
+              <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+            </a>
+            <a
+              href="mailto:example@email.com"
+              className="hover:text-yellow-600"
+            >
+              <FontAwesomeIcon icon="fa-brands fa-google" />
+            </a>
+          </li>
+          <li>
+            <FontAwesomeIcon
+              icon="fa-solid fa-location-crosshairs"
+              className="mr-1"
+            />
+            Europe, Croatia
+          </li>
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-envelope" className="mr-1" />
+            wine@gmail.com
+          </li>
+          <li>
+            <FontAwesomeIcon icon="fa-solid fa-phone" className="mr-1" />
+            +385 98...
+          </li>
         </ul>
       </section>
       <div className="flex flex-wrap w-full justify-around mt-6 mb-6 p-4 border-t border-b border-yellow-500">
