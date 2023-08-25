@@ -200,8 +200,35 @@ button .fa-bars {
 .hidden-tablet{
   display: block;
 }
-@media (min-width: 800px) {
+
+.inner-shadow {
+    box-shadow: inset 0 0 40px #000000;
+}
+
+@media only screen and (min-width: 800px) {
   .hidden-tablet {
     display: none;
   }
+}
+
+@media only screen and (max-width: 320px) {
+  .react-slideshow-container .nav:last-of-type {
+right:-20px !important;
+}
+
+.react-slideshow-container .nav:first-of-type {
+left: -20px !important;
+}
+ 
+}
+
+@media screen and (max-width:220px) {
+  .glassOfWineIcon{
+    display: none;
+  }
+}
+
+.ul-footer > li:not(:first-child) {
+  list-style-type: disc;
+  margin-left: 2em;
 }
