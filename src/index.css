@@ -200,8 +200,20 @@ button .fa-bars {
 .hidden-tablet{
   display: block;
 }
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .hidden-tablet {
     display: none;
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .react-slideshow-container .nav:last-of-type {
+right:-20px !important;
+}
+
+.react-slideshow-container .nav:first-of-type {
+left: -20px !important;
+}
+ 
+}
+

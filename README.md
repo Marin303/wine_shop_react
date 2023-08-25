@@ -25,12 +25,6 @@ npm i --save @fortawesome/free-regular-svg-icons
 npm i --save @fortawesome/react-fontawesome@latest
 ```
 
-### custom scroll-bar-2
 ```
-npm i react-custom-scrollbars-2
-```
-
-```
-npm install react-spring
-
+npm i react-slideshow-image
 ```
