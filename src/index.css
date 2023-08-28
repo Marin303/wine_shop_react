@@ -172,6 +172,7 @@ button .fa-bars {
 .lineeffect:hover>div::after {
   transform: scaleY(1);
 }
+
 .triangle::after {
   content: "";
   width: 0;
@@ -197,12 +198,12 @@ button .fa-bars {
   background-color: yellow;
 }
 
-.hidden-tablet{
+.hidden-tablet {
   display: block;
 }
 
 .inner-shadow {
-    box-shadow: inset 0 0 40px #000000;
+  box-shadow: inset 0 0 40px #000000;
 }
 
 @media only screen and (min-width: 800px) {
@@ -213,22 +214,27 @@ button .fa-bars {
 
 @media only screen and (max-width: 320px) {
   .react-slideshow-container .nav:last-of-type {
-right:-20px !important;
-}
+    right: -20px !important;
+  }
 
-.react-slideshow-container .nav:first-of-type {
-left: -20px !important;
-}
- 
+  .react-slideshow-container .nav:first-of-type {
+    left: -20px !important;
+  }
+
 }
 
 @media screen and (max-width:220px) {
-  .glassOfWineIcon{
+  .glassOfWineIcon {
     display: none;
   }
 }
 
-.ul-footer > li:not(:first-child) {
+.ul-footer>li:not(:first-child) {
   list-style-type: disc;
   margin-left: 2em;
+}
+
+
+.ul-footer2>li:not(:first-child) {
+  margin-left: 1em;
 }

@@ -7,7 +7,7 @@ import p3 from "../Images/p3.jpg";
 
 const Main = () => {
   return (
-    <div className="w-full">
+    <div className="w-full" id="home">
       <div className="relative w-full aspect-video overflow-x-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
           <img

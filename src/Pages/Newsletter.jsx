@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Newsletter = () => {
@@ -16,7 +17,10 @@ const Newsletter = () => {
             placeholder="enter email adress"
             className="p-2 flex-grow min-w-[88px] w-0 rounded-sm"
           />
-          <button className="bg-yellow-600 p-2 rounded-sm">Subscribe</button>
+          <button className="bg-yellow-600 p-2 rounded-sm">
+            <FontAwesomeIcon icon="fa-solid fa-envelope" className="mr-1"/>
+            Subscribe
+          </button>
         </div>
       </section>
     </div>

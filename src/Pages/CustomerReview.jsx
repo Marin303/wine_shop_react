@@ -14,7 +14,7 @@ const CustomerReview = () => {
     >
       <h2 className="md:text-4xl text-2xl mt-10 break-word">Customer Review</h2>
 
-      <div className="mt-20 w-3/4 m-auto">
+      <div className="mt-20 mb-4 w-3/4 m-auto ">
         <Slide>
           <div className="w-3/4 m-auto">
             <img src={customer1} alt="Customer" className="m-auto" />

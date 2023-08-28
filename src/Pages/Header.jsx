@@ -43,10 +43,10 @@ const Header = () => {
         <div className="gap-6 items-center md:flex hidden m-auto">
           <ul className="flex gap-4 ul-desktop">
             <li>
-              <a href="home">HOME</a>
+              <a href="#home">HOME</a>
             </li>
             <li>
-              <a href="wines">WINES</a>
+              <a href="#wines">WINES</a>
 
               <FontAwesomeIcon
                 icon="fa-solid fa-chevron-down"
@@ -54,20 +54,20 @@ const Header = () => {
               />
             </li>
             <li>
-              <a href="gifts">GIFTS</a>
+              <a href="#gifts">GIFTS</a>
             </li>
             <li>
-              <a href="aboutUs">ABOUT US</a>
+              <a href="#aboutUs">ABOUT US</a>
             </li>
             <li>
-              <a href="region">REGION</a>
+              <a href="#region">REGION</a>
               <FontAwesomeIcon
                 icon="fa-solid fa-chevron-down"
                 className="pl-2"
               />
             </li>
             <li>
-              <a href="user">USER</a>
+              <a href="#user">USER</a>
               <FontAwesomeIcon
                 icon="fa-solid fa-chevron-down"
                 className="pl-2"
